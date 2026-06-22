@@ -2,6 +2,11 @@
   publish = "."
   functions = "netlify/functions"
 
+[[redirects]]
+  from = "/api/discovery-email"
+  to = "/.netlify/functions/discovery-email"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
