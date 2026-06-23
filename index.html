@@ -1875,7 +1875,13 @@ input[type=range]::-moz-range-thumb {
           if (arrow) arrow.style.display = '';
           spinner.remove();
           go.disabled = false;
-          alert('Something went wrong. Please try again or email contact@truecrewllc.com directly.');
+          let msg = 'Something went wrong. Please try again or email contact@truecrewllc.com directly.';
+          try {
+            const j = await res.json();
+            if (j && j.detail) msg = 'Email failed: ' + j.detail;
+            else if (j && j.error) msg = 'Email failed: ' + j.error;
+          } catch (e) { /* keep default */ }
+          alert(msg);
         }
       } catch (err) {
         goText.textContent = 'Send my report — get the recommendation';
