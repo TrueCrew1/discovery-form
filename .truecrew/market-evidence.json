@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TrueCrew1/Engineer-standard/be1ddd6e27e4f6441b0c3ee4619360c14a3fd754/schemas/market-evidence.schema.json",
+  "schemaVersion": 1,
+  "standardCommit": "be1ddd6e27e4f6441b0c3ee4619360c14a3fd754",
+  "repository": "TrueCrew1/discovery-form",
+  "observedAt": "2026-09-02",
+  "problem": "True Crew needs a low-friction way to capture qualified operator discovery input while protecting privacy and avoiding unsupported product claims.",
+  "evidenceStage": "hypothesis",
+  "observations": [
+    {
+      "id": "portfolio-observation",
+      "type": "other",
+      "signal": "neutral",
+      "sourceRef": "Engineer-standard portfolio review 2026-08-27",
+      "observedAt": "2026-09-02",
+      "summary": "The repository is a public discovery-intake surface; storage, privacy behavior, and conversion quality still require explicit validation."
+    }
+  ],
+  "disconfirmingSignal": "Qualified target operators consistently report the problem is low-value or already solved well enough by existing workflows.",
+  "nextValidationGate": "Collect privacy-safe operator evidence and measurable outcome data before raising the evidence stage.",
+  "privacyRule": "Do not place PII, secrets, or raw sensitive customer content in market evidence records."
+}
